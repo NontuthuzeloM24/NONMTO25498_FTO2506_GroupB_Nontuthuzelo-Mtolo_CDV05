@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      content="Portfolio of Nontuthuzelo Mtolo — Frontend Developer skilled in JavaScript, and Tailwind CSS."
+    />
+    <title>Nontuthuzelo-Mtolo | Developer Portfolio</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="portfolio/script/main.js"></script>
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300"
+  >
+    <!-- NAVBAR -->
+    <header
+      class="sticky top-0 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md shadow z-50"
+    >
+      <nav
+        class="container mx-auto flex items-center justify-between p-4 relative"
+      >
+        <h1 class="text-2xl font-bold">Nontuthuzelo Mtolo</h1>
+
+        <!-- Desktop Nav -->
+        <ul class="hidden md:flex gap-6">
+          <li><a href="#about" class="hover:text-blue-500">About</a></li>
+          <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
+          <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+        </ul>
+
+        <!-- Icons on Right -->
+        <div class="flex items-center gap-3">
+          <!-- Mobile Menu Button -->
+          <button
+            id="menuBtn"
+            class="md:hidden p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700"
+          >
+            🍔
+          </button>
+
+          <!-- Theme Toggle -->
+          <button
+            id="themeToggle"
+            class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
+          >
+            🌙
+          </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <ul
+          id="mobileMenu"
+          class="absolute right-4 top-16 bg-white dark:bg-gray-800 shadow-md rounded-md p-4 flex flex-col gap-4 md:hidden hidden"
+        >
+          <li><a href="#about" class="hover:text-blue-500">About</a></li>
+          <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
+          <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section
+      id="hero"
+      class="min-h-screen flex flex-col md:flex-row items-center justify-center text-center md:text-left gap-8 p-8"
+    >
+      <div>
+        <h2 class="text-4xl md:text-6xl font-bold mb-4">
+          Hi, I'm <span class="text-blue-500">Nontuthuzelo Mtolo</span>
+        </h2>
+        <p class="text-xl mb-6">
+          A Frontend Developer building responsive web experiences with
+          <span class="font-semibold">JavaScript</span> &
+          <span class="font-semibold">Tailwind CSS</span>.
+        </p>
+        <div class="flex flex-wrap justify-center md:justify-start gap-4">
+          <a
+            href="#projects"
+            class="bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-600"
+            >View My Work</a
+          >
+          <a
+            href="#contact"
+            class="border border-blue-500 text-blue-500 px-6 py-3 rounded-md hover:bg-blue-50 dark:hover:bg-gray-800"
+            >Contact Me</a
+          >
+        </div>
+      </div>
+      <div>
+        <img
+          src="/assets/zelom.png"
+          alt="Profile image"
+          class="w-64 h-66 object-cover rounded-xl shadow-lg"
+        />
+      </div>
+    </section>
+
+    <!-- ABOUT & SKILLS -->
+    <section id="about" class="py-20 bg-gray-50 dark:bg-gray-800">
+      <div
+        class="container mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-10 items-center"
+      >
+        <div>
+          <h3 class="text-3xl font-bold mb-4">About Me</h3>
+          <p class="text-lg mb-4">
+            I'm a passionate frontend developer who loves building clean,
+            user-friendly interfaces. I'm constantly learning new technologies
+            to improve my craft and create impactful digital experiences.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-3xl font-bold mb-4">Skills</h3>
+          <div class="flex flex-wrap gap-3">
+            <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full"
+              >HTML</span
+            >
+            <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full"
+              >CSS</span
+            >
+            <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full"
+              >Tailwind</span
+            >
+            <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full"
+              >JavaScript</span
+            >
+            <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full"
+              >React</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-20">
+      <div class="container mx-auto px-6 md:px-12">
+        <h3 class="text-3xl font-bold text-center mb-12">Projects</h3>
+        <div class="grid md:grid-cols-2 gap-10">
+          <!-- Project 1 -->
+          <div
+            class="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden hover:scale-105 transition"
+          >
+            <img
+              src="/assets/kanban.png"
+              alt="Kanban App preview"
+              class="w-full h-64 object-cover"
+            />
+            <div class="p-6">
+              <h4 class="text-2xl font-semibold mb-2">Responsive Kanban App</h4>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                A task management application with an intuitive interface,
+                enabling efficient creation, editing, and organization of tasks.
+              </p>
+              <p class="text-sm mb-4"><strong>Tech:</strong> HTML, CSS, JS</p>
+              <div class="flex gap-4">
+                <a
+                  href="https://nontuthuzelo-mtolo-jslpp.netlify.app/"
+                  class="text-blue-500 hover:underline"
+                  >Live Demo</a
+                >
+                <a
+                  href="https://github.com/NontuthuzeloM24/NONMTO25498_FTO2506_GroupB_Nontuthuzelo-Mtolo_JSLPP"
+                  class="text-blue-500 hover:underline"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden hover:scale-105 transition"
+          >
+            <img
+              src="/assets/podcast.png"
+              alt="Podcast preview"
+              class="w-full h-64 object-cover"
+            />
+            <div class="p-6">
+              <h4 class="text-2xl font-semibold mb-2">Podcast</h4>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                A podcast platform designed for browsing and managing podcast
+                content, providing a clean and user-friendly experience.
+              </p>
+              <p class="text-sm mb-4">
+                <strong>Tech:</strong> JS, CSS, HTML
+              </p>
+              <div class="flex gap-4">
+                <a href="https://nontuthuzelo-mtolo-djs01.netlify.app/" class="text-blue-500 hover:underline">Live Demo</a>
+                <a
+                  href="https://github.com/NontuthuzeloM24/NONMTO25498_FTO2506_GroupB_Nontuthuzelo-Mtolo_DJS01"
+                  class="text-blue-500 hover:underline"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800">
+      <div class="container mx-auto text-center px-6">
+        <h3 class="text-3xl font-bold mb-6">Let's Connect 💬</h3>
+        <p class="mb-6">
+          Feel free to reach out if you'd like to collaborate or just say hi!
+        </p>
+        <p>
+          📧
+          <a
+            href="mailto:mtolonontuthuzelo4@gmail.com"
+            class="text-blue-500 hover:underline"
+            >mtolonontuthuzelo4@gmail.com</a
+          >
+        </p>
+        <p>
+          🐙
+          <a
+            href="https://github.com/NontuthuzeloM24"
+            class="text-blue-500 hover:underline"
+            >github.com</a
+          >
+        </p>
+        <p>
+          💼
+          <a
+            href="https://www.linkedin.com/in/nontuthuzelo-mtolo-877b34237/"
+            class="text-blue-500 hover:underline"
+            >linkedin.com</a
+          >
+        </p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-6 bg-gray-900 text-gray-400 text-center">
+      <p>© 2025 Nontuthuzelo Mtolo — Built with ❤️ using Tailwind CSS</p>
+      <a href="#hero" class="text-blue-400 hover:underline block mt-2"
+        >Back to top ↑</a
+      >
+    </footer>
+  </body>
+</html>
