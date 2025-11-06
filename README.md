@@ -1,5 +1,3 @@
-# NONMTO25498_FTO2506_GroupB_Nontuthuzelo-Mtolo_CDV05
-
 # 🌟 Nontuthuzelo Mtolo — Frontend Developer Portfolio
 
 # 🌈 Overview
