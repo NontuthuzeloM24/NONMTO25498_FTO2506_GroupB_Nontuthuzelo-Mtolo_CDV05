@@ -1,55 +1,73 @@
+// ====== Tailwind Dark Mode Config ======
+if (typeof tailwind !== "undefined") {
+  tailwind.config = {
+    darkMode: "class", // Use the 'dark' class on <html>
+  };
+}
+
 // ====== Mobile Nav Toggle ======
-const menuBtn = document.getElementById('menuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
 
 if (menuBtn && mobileMenu) {
-  menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
   });
 }
 
 // ====== Smooth Scrolling ======
 const navLinks = document.querySelectorAll('a[href^="#"]');
-navLinks.forEach(link => {
-  link.addEventListener('click', e => {
+navLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
     e.preventDefault();
-    const targetId = link.getAttribute('href').substring(1);
+    const targetId = link.getAttribute("href").substring(1);
     const targetEl = document.getElementById(targetId);
+
     if (targetEl) {
-      targetEl.scrollIntoView({ behavior: 'smooth' });
-      // Close mobile menu after click
-      if (!mobileMenu.classList.contains('hidden')) {
-        mobileMenu.classList.add('hidden');
+      targetEl.scrollIntoView({ behavior: "smooth" });
+
+      // Close mobile menu after clicking a link
+      if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
+        mobileMenu.classList.add("hidden");
       }
     }
   });
 });
 
 // ====== Dark Mode Toggle ======
-const themeToggle = document.getElementById('themeToggle');
-const htmlElement = document.documentElement;
+const themeToggle = document.getElementById("themeToggle");
+const html = document.documentElement;
 
-// Apply saved theme on page load
-if (localStorage.getItem('theme') === 'dark') {
-  htmlElement.classList.add('dark');
-  if (themeToggle) themeToggle.textContent = '☀️';
-} else {
-  htmlElement.classList.remove('dark');
-  if (themeToggle) themeToggle.textContent = '🌙';
+// Helper to set theme
+function setTheme(mode) {
+  if (mode === "dark") {
+    html.classList.add("dark");
+    themeToggle.textContent = "☀️";
+    localStorage.setItem("theme", "dark");
+  } else {
+    html.classList.remove("dark");
+    themeToggle.textContent = "🌙";
+    localStorage.setItem("theme", "light");
+  }
 }
 
-// Toggle dark mode on click
+// Load saved theme on page load
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) {
+  setTheme(savedTheme);
+} else {
+  // Default to system preference
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  setTheme(prefersDark ? "dark" : "light");
+}
+
+// Toggle on click
 if (themeToggle) {
-  themeToggle.addEventListener('click', () => {
-    htmlElement.classList.toggle('dark');
-    if (htmlElement.classList.contains('dark')) {
-      localStorage.setItem('theme', 'dark');
-      themeToggle.textContent = '☀️';
-    } else {
-      localStorage.setItem('theme', 'light');
-      themeToggle.textContent = '🌙';
-    }
+  themeToggle.addEventListener("click", () => {
+    const isDark = html.classList.contains("dark");
+    setTheme(isDark ? "light" : "dark");
   });
 }
+
 
 
