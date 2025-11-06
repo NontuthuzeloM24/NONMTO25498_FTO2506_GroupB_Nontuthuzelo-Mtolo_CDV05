@@ -70,4 +70,20 @@ if (themeToggle) {
 }
 
 
+// ====== External Links: Open in New Tab ======
+document.querySelectorAll("a[href]").forEach((link) => {
+  const href = link.getAttribute("href");
+
+  // Skip internal links (#about, /projects, mailto:, etc.)
+  const isInternal =
+    href.startsWith("#") ||
+    href.startsWith("/") ||
+    href.startsWith("mailto:") ||
+    href.startsWith("tel:");
+
+  if (!isInternal) {
+    link.setAttribute("target", "_blank");
+    link.setAttribute("rel", "noopener noreferrer");
+  }
+});
 
