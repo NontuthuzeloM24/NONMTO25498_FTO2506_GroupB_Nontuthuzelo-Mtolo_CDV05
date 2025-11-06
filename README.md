@@ -5,8 +5,6 @@
 This is a personal portfolio website for Nontuthuzelo Mtolo, a frontend developer skilled in JavaScript and Tailwind CSS.
 The website showcases projects, skills, and contact information with a responsive design for desktop and mobile.
 
-🚀 Live Demo: [Your Live Demo URL][]
-
 💻 GitHub Repository: [[Github](https://github.com/NontuthuzeloM24/NONMTO25498_FTO2506_GroupB_Nontuthuzelo-Mtolo_CDV05)]
 
 
@@ -34,6 +32,11 @@ JavaScript (ES6)
 Tailwind CSS
 
 Google Fonts (Inter)
+
+⚠️ Note on Tailwind CSS
+
+This project uses Tailwind CSS via CDN for styling.
+I used it for the convenience of development, but it is not recommended for production deployment.
 
 
 # 🎯 Usage
