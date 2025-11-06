@@ -1,8 +1,8 @@
 # NONMTO25498_FTO2506_GroupB_Nontuthuzelo-Mtolo_CDV05
 
-🌟 Nontuthuzelo Mtolo — Frontend Developer Portfolio
+# 🌟 Nontuthuzelo Mtolo — Frontend Developer Portfolio
 
-🌈 Overview
+# 🌈 Overview
 
 This is a personal portfolio website for Nontuthuzelo Mtolo, a frontend developer skilled in JavaScript and Tailwind CSS.
 The website showcases projects, skills, and contact information with a responsive design for desktop and mobile.
