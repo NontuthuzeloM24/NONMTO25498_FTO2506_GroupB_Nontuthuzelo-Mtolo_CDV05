@@ -5,9 +5,9 @@
 This is a personal portfolio website for Nontuthuzelo Mtolo, a frontend developer skilled in JavaScript and Tailwind CSS.
 The website showcases projects, skills, and contact information with a responsive design for desktop and mobile.
 
-🚀 Live Demo: Your Live Demo URL
+🚀 Live Demo: [Your Live Demo URL][]
 
-💻 GitHub Repository: [https://github.com/NontuthuzeloM24/NONMTO25498_FTO2506_GroupB_Nontuthuzelo-Mtolo_CDV05]
+💻 GitHub Repository: [[Github](https://github.com/NontuthuzeloM24/NONMTO25498_FTO2506_GroupB_Nontuthuzelo-Mtolo_CDV05)]
 
 
 # ✨ Features
